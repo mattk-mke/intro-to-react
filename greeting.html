@@ -4,23 +4,26 @@
     <title>My First React App</title>
   </head>
   <body>
-     <div id="app"></div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-     <script type="text/babel">
-        class Greeting extends React.Component {
-         render() {
-           return (
-             <div>
-               <h1>Hello World!</h1>
-             </div>
-           );
-         }
-       }
-       ReactDOM.render(
-         <Greeting />, document.getElementById('app')
-       );
-     </script>
+    <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script type="text/babel">
+      class Content extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>My React Component</h1>
+              <p>Hello {this.props.name}, this is some content to showcase React!</p>
+              <p>Take note of my dog, her name is Goose!</p>
+              <img src="https://i.imgur.com/tA49Rgn.jpg" alt="My dog, Goose" />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <Content name="Grader" />, document.getElementById('app')
+      );
+    </script>
   </body>
 </html>
